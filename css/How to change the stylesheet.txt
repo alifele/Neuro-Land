@@ -1,0 +1,72 @@
+How to setup the Dark theme in the both Qtdesigner and the final output:
+
+
+
+first of all you should select the stylesheet that you want to use. try googelign "css for PyQt5". On of the tio results will be the following website:
+
+https://medium.com/@mahmoudahmed_92535/pyqt5-best-css-styles-8554263b2599
+
+
+I will use the first stylesheet through out this article.
+
+go to the repository. Now you have two options to use the stylesheet.
+
+1. simply pip install the library and follow the instructions in the README of the repository
+
+
+2. clone the repository and dive in the source codes. The only thing that you will need is the content of the qdarkstyle folder.
+all of the other stuffs are the codes to of the library.
+
+
+first you will need some new icons (for example for the radio box, ...)
+to do this you should add style.qrc file to the sources of the QtDesigner. and then add the compiled code of the style.qrc to the location of the final python file.
+(You can compile this using pyrcc5 iconresource.qrc -o iconresource_rc.py)
+
+
+but the good news is that the compiled file of the style.qrc in awailable in the folder. that is style_rc.py file.
+
+
+
+lets back to the QtDesigner. click on the most upper window and select 'change Style Sheet'
+
+Now Go and copy and paste all of the content of the style.qss file to the white area over there. thats it. now you can see that the style of the widgets has changed.
+
+
+
+
+
+how to execute the final python file?
+
+
+save the QtDesigner and compile it to a .py file using:
+pyuic5 main.ui -o main.py
+
+
+now if you open the main.py file you will find lots of text file as the input of the MyLoginForm.setStyleSheet("....")
+
+this bunch of code will decrease the readiblity of the code. so add the style.qcc file to the working directory, and the open it inside the script and the save it in a variable. now you can feed that variable as the argument of the function
+
+
+f = open('style.qss')
+style = f.read()
+f.close()
+
+.
+.
+.
+
+MyLoginForm.setStyleSheet(style)
+
+. 
+.
+.
+.
+
+
+
+
+
+
+
+
+
