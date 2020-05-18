@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+pyuic5 main.ui -o mian_source.py
+

@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Icons/iconfinder_shopping-cart_2955265.png</file>
+    <file>Icons/iconfinder_camera_2955251.png</file>
+    <file>Icons/iconfinder_globe_2955260.png</file>
+  </qresource>
+</RCC>
