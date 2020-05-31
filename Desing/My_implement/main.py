@@ -78,6 +78,7 @@ class mainwindow(QMainWindow):
         self.sensestim = MYQT.QAction(QIcon('icons/icon.png'),"Sensial", self)
         self.odorstim = MYQT.QAction(QIcon('icons/icon.png'),"Odor", self)
         self.tastestim = MYQT.QAction(QIcon('icons/icon.png'),"Taste", self)
+        self.cond = MYQT.QAction(QIcon('icons/icon.png'),"Conditioning", self)
 
 
 
@@ -130,6 +131,7 @@ class mainwindow(QMainWindow):
         rl.add_ribbon_widget(RibbonButton(self, self.maze, True))
         rl.add_ribbon_widget(RibbonButton(self, self.pingpong, True))
         rl.add_ribbon_widget(RibbonButton(self, self.snake, True))
+        rl.add_ribbon_widget(RibbonButton(self, self.cond, True))
 
 
         gen = AI.add_ribbon_pane("Genetic")
