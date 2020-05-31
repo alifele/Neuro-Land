@@ -1,1 +1,1 @@
-# Open-Neural-Dynamical-Systems-Simulaotr-NDSS-
+# Open-Neural-Dynamical-Systems-Simulator-NDSS-
