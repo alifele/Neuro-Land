@@ -33,7 +33,7 @@ class mainwindow(QMainWindow):
 
 
     def init_signals(self):
-        self.ui.dynamic_tab.Fithz.triggered.connect(self.test)
+        self.ui.dynamic_tab.huxly_model.triggered.connect(self.test)
 
 
     def test(self):
@@ -48,6 +48,6 @@ def start():
     main = mainwindow()
     #main.test()
     main.show()
-    app.exec_()
+    sys.exit(app.exec_())
 
 start()

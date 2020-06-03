@@ -55,4 +55,4 @@ def run_animation(v_list, n_list, m_list, h_list, N_spikes,I,t):
 
     animobj = Animationcls(Lines, Pathes, init_data, fig, draw_mode)
     anim = animobj.start_animation()
-    anim.save('result{}'.format(0) + '.gif', dpi=100, writer='imagemagick', fps = 30)
+    #anim.save('result{}'.format(0) + '.gif', dpi=100, writer='imagemagick', fps = 30)
