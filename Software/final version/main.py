@@ -12,7 +12,7 @@ import ribbon_actions
 import qdarkstyle.style_rc
 import sys
 
-from Tabs.Dynamical_systems.neuron_models.Huxly.sin_plot.sin_widget import sinWidget
+from Tabs.Dynamical_systems.neuron_models.Huxly.Implementation.gui import huxly_dialog
 
 from appear import UI_elemts
 
@@ -37,7 +37,7 @@ class mainwindow(QMainWindow):
 
 
     def test(self):
-        self.new_window1 = sinWidget(self.ui)
+        self.new_window1 = huxly_dialog(self.ui)
 
 
 
