@@ -1,5 +1,7 @@
 from PyQt5 import QtWidgets
-from sin_plot.main_sin import Ui_Form
+
+from Tabs.Dynamical_systems.neuron_models.Huxly.sin_plot.main_sin import Ui_Form
+from Tabs.Dynamical_systems.neuron_models.Huxly.sin_plot.plot import canvas_widget
 import numpy as np
 
 

@@ -12,7 +12,7 @@ import ribbon_actions
 import qdarkstyle.style_rc
 import sys
 
-from sin_plot.sin_widget import Sin_window
+from Tabs.Dynamical_systems.neuron_models.Huxly.sin_plot.sin_widget import sinWidget
 
 from appear import UI_elemts
 
@@ -20,45 +20,32 @@ from appear import UI_elemts
 
 
 
-
-
 class mainwindow(QMainWindow):
-    def __init__(self,app):
+    def __init__(self):
         super().__init__()
-
-        self.app = app
-
         self.ui = UI_elemts()
         self.ui.Setup_UI(self)
 
+        self.init_signals()
 
-        self.new_window = Sin_window()
-        self.new_window.setWindowTitle("Huxly Model")
-        self.ui.mdiArea.addSubWindow(self.new_window)
 
-        self.new_window1 = QDialog()
-        self.new_window1.setWindowTitle("Neural Network")
-        self.ui.mdiArea.addSubWindow(self.new_window1)
 
-        #self.new_windowF = Sin_window()
-        #self.new_windowF.setWindowTitle("Futz")
-        #self.ui.mdiArea.addSubWindow(self.new_windowF)
 
+
+    def init_signals(self):
         self.ui.dynamic_tab.Fithz.triggered.connect(self.test)
 
 
     def test(self):
-        #self.app.exit()
-        self.new_windowF = Sin_window()
-        self.new_windowF.setWindowTitle("Futz")
-        self.ui.mdiArea.addSubWindow(self.new_windowF)
-        self.new_windowF.exec_()
+        self.new_window1 = sinWidget(self.ui)
+
+
 
 
 
 def start():
     app = QApplication([])
-    main = mainwindow(app)
+    main = mainwindow()
     #main.test()
     main.show()
     app.exec_()
