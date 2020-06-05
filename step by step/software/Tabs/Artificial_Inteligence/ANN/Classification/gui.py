@@ -2,7 +2,7 @@ from PyQt5 import QtWidgets
 from Tabs.Artificial_Inteligence.ANN.Classification.main import Ui_Dialog
 import numpy as np
 import matplotlib.pyplot as plt
-
+from PyQt5 import QtGui
 
 
 class classification(QtWidgets.QDialog):
@@ -11,11 +11,17 @@ class classification(QtWidgets.QDialog):
 
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+        self.ui.label.pixmap().fill(QtGui.QColor('black'))
 
         self.ui.spinBox.valueChanged.connect(self.layers_chaged)
         self.ui.spinBox.setValue(int(4))
         self.ui.pushButton_2.clicked.connect(self.start_train)
+        self.ui.push_clear.clicked.connect(self.clear_canv)
 
+    def clear_canv(self):
+        self.ui.label.pixmap().fill(QtGui.QColor('black'))
+        self.ui.label.update()
+        
     def layers_chaged(self, val):
         self.ui.tableWidget.setRowCount(int(val))
         for i in range(val):
