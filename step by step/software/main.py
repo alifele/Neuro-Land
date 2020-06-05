@@ -14,6 +14,8 @@ import sys
 
 from Tabs.Dynamical_systems.neuron_models.Huxly.Implementation.gui import huxly_dialog
 from Tabs.Dynamical_systems.neuron_models.Fithz.Implementation.gui import fitz_dialog
+from Tabs.Artificial_Inteligence.ANN.Classification.gui import classification_gui
+
 
 
 from appear import UI_elemts
@@ -37,6 +39,7 @@ class mainwindow(QMainWindow):
     def init_signals(self):
         self.ui.dynamic_tab.huxly_model.triggered.connect(self.huxly_clicked)
         self.ui.dynamic_tab.Fithz.triggered.connect(self.fitz_clicked)
+        self.ui.artificial_intelligence_tab.class_.triggered.connect(self.classifi_clikced)
 
 
 
@@ -46,6 +49,8 @@ class mainwindow(QMainWindow):
     def fitz_clicked(self):
         self.fitz_window = fitz_dialog(self.ui)
 
+    def classifi_clikced(self):
+        self.classi_window = classification_gui(self.ui)
 
 
 
