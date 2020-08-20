@@ -53,7 +53,7 @@ class classification(QtWidgets.QDialog):
 class classification_gui(classification):
     def __init__(self, ui):
         super().__init__()
-        self.setWindowTitle('Fitz-Hugh Nagumo model')
+        self.setWindowTitle('Hand write Recognition')
         ui.mdiArea.addSubWindow(self)
         self.exec_()
 

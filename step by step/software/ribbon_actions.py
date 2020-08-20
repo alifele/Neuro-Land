@@ -3,7 +3,7 @@ from imports import *
 
 class Dynamical_Systems_tab:
     def __init__(self, ribbon, mainwindow):
-        dynamic = ribbon.add_ribbon_tab("Dynamic")
+        dynamic = ribbon.add_ribbon_tab("Neurons")
         ### Actions ###
 
         self.huxly_model = QtWidgets.QAction(QIcon('icons/icon.png'),"Huxly", mainwindow)
@@ -11,7 +11,7 @@ class Dynamical_Systems_tab:
         self.custom = QtWidgets.QAction(QIcon('icons/icon.png'),"custom", mainwindow)
         self._brain_action = QtWidgets.QAction(QIcon('icons/icon.png'),"Brain", mainwindow)
 
-        file_pane = dynamic.add_ribbon_pane("Neurons models")
+        file_pane = dynamic.add_ribbon_pane("Neuronal models")
         file_pane.add_ribbon_widget(RibbonButton(mainwindow, self.huxly_model, True))
         file_pane.add_ribbon_widget(RibbonButton(mainwindow, self.Fithz, True))
         file_pane.add_ribbon_widget(RibbonButton(mainwindow, self.custom, True))
@@ -23,7 +23,7 @@ class Dynamical_Systems_tab:
 class Neural_Networks_tab:
     def __init__(self, ribbon, mainwindow):
 
-        neural = ribbon.add_ribbon_tab("Neural Networks")
+        neural = ribbon.add_ribbon_tab("Neural Networks and Artificial Intelligence")
         ### Actions ###
         self.model = QtWidgets.QAction(QIcon('icons/icon.png'),"perceptro", mainwindow)
         self.multi = QtWidgets.QAction(QIcon('icons/icon.png'),"Multi", mainwindow)
@@ -61,7 +61,7 @@ class Artificial_Intelligence_tab:
         self.cond = QtWidgets.QAction(QIcon('icons/icon.png'),"Conditioning", mainwindow)
 
 
-        AI = ribbon.add_ribbon_tab("Artificial Intelligence")
+        AI = ribbon.add_ribbon_tab("Metaheuristics")
         Ann = AI.add_ribbon_pane("ANN")
         Ann.add_ribbon_widget(RibbonButton(mainwindow, self.class_, True))
         Ann.add_ribbon_widget(RibbonButton(mainwindow, self.reg, True))
@@ -88,7 +88,7 @@ class Cellular_Automata_tab:
         self._brain_action = QtWidgets.QAction(QIcon('icons/icon.png'),"Brain", mainwindow)
 
 
-        cell = ribbon.add_ribbon_tab("Cellular Automata")
+        cell = ribbon.add_ribbon_tab("Signal Processing")
         p1 = cell.add_ribbon_pane('Game of Life')
         p1.add_ribbon_widget(RibbonButton(mainwindow, self._brain_action, True))
         p1.add_ribbon_widget(RibbonButton(mainwindow, self._brain_action, True))

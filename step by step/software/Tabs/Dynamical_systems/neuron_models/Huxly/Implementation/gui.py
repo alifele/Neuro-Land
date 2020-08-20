@@ -122,7 +122,7 @@ class huxly(QtWidgets.QDialog):
 class huxly_dialog(huxly):
     def __init__(self, ui):
         super().__init__()
-        self.setWindowTitle('Sin plotter')
+        self.setWindowTitle('Hodgkin–Huxley model')
         ui.mdiArea.addSubWindow(self)
         self.exec_()
 
